@@ -1,0 +1,941 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Godshome";
+  src: url(/Fonts/Godshome.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #0a0200;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  gap: 30px;
+}
+
+.nav-Links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-Links li {
+  display: inline-block;
+}
+
+.nav-Links a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 3%;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-Links a:hover {
+  color: #c80000;
+}
+
+.cta {
+  text-decoration: none;
+}
+
+.btn-Contact {
+  width: 165px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  background-color: #c80000;
+  border-radius: 50px;
+  opacity: 1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  outline: none;
+  margin-left: 60px;
+}
+
+.btn-Contact:focus {
+  outline: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 20px 5%;
+  }
+
+  .navbar {
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .nav-Links {
+    gap: 15px;
+  }
+
+  .btn-Contact {
+    width: 140px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background-color: #0a0200;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .nav-Links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-Links li {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: 0.3s;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .btn-Contact {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-Links {
+    gap: 10px;
+  }
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  height: 87vh;
+  position: relative;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(10, 2, 0) 0%,
+      rgba(10, 2, 0, 0.7) 20%,
+      rgba(10, 2, 0, 0) 40%
+    ),
+    linear-gradient(
+      to right,
+      rgb(10, 2, 0) 0%,
+      rgba(10, 2, 0, 0.5) 50%,
+      rgba(10, 2, 0, 0) 60%
+    ),
+    url("../Assets/JPG Files/Hero-Bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  padding: 50px 10%;
+  color: white;
+  z-index: 2;
+  max-width: 67%;
+}
+
+.hero h3 {
+  padding-top: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 120%;
+  letter-spacing: 3%;
+  color: #ffffff;
+}
+
+.hero h1 {
+  padding-top: 20px;
+  font-family: "Godshome";
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.hero h1 span {
+  color: #c80000;
+}
+
+.hero-buttons {
+  margin-top: 50px;
+}
+
+.btn-reserve,
+.btn-view {
+  display: inline-block;
+  padding: 19px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-reserve {
+  background-color: #c80000;
+  color: white;
+}
+
+.btn-reserve:hover {
+  background-color: #a00000;
+}
+
+.btn-view {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  margin-left: 10px;
+}
+
+.btn-view:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Hero Responsive */
+
+/* About SECTION */
+.about {
+  display: flex;
+  height: 100vh;
+  padding: 50px 10%;
+  color: white;
+  position: relative;
+  background-color: #121212;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-images {
+  display: flex;
+  position: relative;
+}
+
+.a-image {
+  width: 100%;
+  max-width: 360px;
+}
+
+.a-image img {
+  width: 100%;
+  display: block;
+}
+
+.image1 {
+  position: relative;
+  z-index: 1;
+  top: -45px;
+  left: 10px;
+}
+
+.image2 {
+  position: absolute;
+  left: 210px;
+  bottom: -40px;
+  z-index: 2;
+}
+
+.about-text h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 120%;
+  letter-spacing: 3%;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.about-text h2 {
+  font-size: 40px;
+  font-family: "Godshome";
+  font-weight: 400;
+  font-size: 57px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.about-text h2 span {
+  color: #c80000;
+}
+
+.about-text p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  letter-spacing: 3%;
+  margin: 20px 0;
+}
+
+.btn-discover {
+  display: inline-block;
+  padding: 19px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  background-color: #c80000;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-discover:hover {
+  background-color: #a00000;
+}
+
+/* @media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-images {
+    justify-content: center;
+  }
+
+  .image1 {
+    transform: none;
+  }
+
+  .image2 {
+    left: 20px;
+    bottom: -10px;
+  }
+} */
+
+/* Menu SECTION */
+.menu {
+  height: 150vh;
+  padding: 90px 0;
+  color: white;
+  background-color: #0a0200;
+}
+
+.menu h3 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 120%;
+  letter-spacing: 3%;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.menu h2 {
+  text-align: center;
+  font-family: "Godshome";
+  font-weight: 400;
+  font-size: 57px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.menu h2 span {
+  color: #c80000;
+}
+
+.menu p {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  letter-spacing: 3%;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu-slider {
+  display: flex;
+  gap: 90px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.menu-slider::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari */
+}
+
+.menu-card {
+  width: 70vw; /* Relative width for responsiveness */
+  height: 70vh; /* Relative height for responsiveness */
+  background-color: rgb(255, 0, 0);
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card.left,
+.menu-card.right {
+  filter: brightness(40%);
+  opacity: 0.8;
+}
+
+
+/* @media (max-width: 1200px) { 
+  .card {
+      width: 80vw;
+      height: 35vh;
+  }
+}
+
+@media (max-width: 768px) { 
+  .card {
+      width: 90vw;
+      height: 30vh;
+  }
+}
+
+@media (max-width: 480px) { 
+  .slider {
+      gap: 20px;
+  }
+  .card {
+      width: 95vw;
+      height: 25vh;
+  }
+} */
+
+/* Events SECTION */
+.events {
+  height: 130vh;
+  padding: 90px 0;
+  color: white;
+  background-color: #121212;
+}
+
+.events h3 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 120%;
+  letter-spacing: 3%;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.events h2 {
+  text-align: center;
+  font-family: "Godshome";
+  font-weight: 400;
+  font-size: 57px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.events h2 span {
+  color: #c80000;
+}
+
+.events p {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  letter-spacing: 3%;
+  margin-top: 20px;
+}
+
+.event-carousel {
+  margin-top: 6%;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-events {
+  position: relative;
+  width: 700px;
+  height: 370px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.card-events img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+
+.card-events.center {
+  box-shadow: 0px 1px 10px 3px #c80000;
+  position: absolute;
+  z-index: 2;
+  margin-bottom: 150px;
+}
+
+.card-events.left,
+.card-events.right {
+  filter: brightness(40%);
+  opacity: 0.8;
+  position: relative;
+  z-index: 1;
+}
+
+.card-events.left {
+  margin-right: 40px;
+}
+
+.card-events.right {
+  margin-left: 40px;
+}
+
+.card-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 40%;
+  z-index: 2;
+}
+
+.card-content h4 {
+  padding-top: 20px;
+  font-family: "Godshome";
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.card-content h4 span {
+  color: #c80000;
+}
+
+.card-content p {
+  text-align: left;
+  font-size: 16px;
+  margin: 10px 0;
+  font-family: "Montserrat", sans-serif;
+  line-height: 180%;
+  letter-spacing: 3%;
+}
+
+/* View More Button */
+.view-more {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 50px;
+  background: transparent;
+  border: none;
+  color: #c80000;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.view-more i {
+  font-size: 25px;
+  font-weight: 200;
+  transition: transform 0.3s ease-in-out;
+}
+
+.view-more:hover i {
+  transform: translateX(10px);
+}
+
+.button-events-slider {
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button-events-slider i {
+  cursor: pointer;
+  gap: 15px;
+  color: #5c5c5c;
+  font-size: 25px;
+  font-weight: 200;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-events-slider i:hover {
+  color: #c80000;
+}
+
+/* RESERVATION SECTION */
+.reservation {
+  color: white;
+  background-color: #0a0200;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 70vh;
+  text-align: left;
+  background-image: url("../Assets/JPG Files/Reservation-bg.jpg");
+  background-size: cover; /* Ensure proper resizing */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.reservation-container {
+  max-width: 600px;
+  margin-right: 10%;
+}
+
+.reservation-text h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.reservation-text h2 {
+  font-size: 55px;
+  font-family: "Godshome";
+  font-weight: 500;
+  line-height: 120%;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.reservation-text h2 span {
+  color: #c80000;
+  font-weight: 700;
+}
+
+.btn-discover {
+  display: inline-block;
+  padding: 15px 35px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: #c80000;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.btn-discover:hover {
+  background-color: #a00000;
+}
+
+@media (max-width: 1024px) {
+  .reservation {
+    background-size: 110%;
+    height: 75vh;
+  }
+
+  .reservation-container {
+    max-width: 500px;
+    margin-right: 5%;
+  }
+
+  .reservation-text h2 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reservation {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    height: 70vh;
+  }
+
+  .reservation-container {
+    max-width: 90%;
+    margin-right: 0;
+  }
+
+  .reservation-text h3 {
+    font-size: 20px;
+  }
+
+  .reservation-text h2 {
+    font-size: 40px;
+  }
+
+  .btn-discover {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+}
+
+/* Adjust height for mobile */
+@media (max-width: 480px) {
+  .reservation {
+    height: 60vh;
+    padding: 10px;
+  }
+
+  .reservation-text h3 {
+    font-size: 18px;
+  }
+
+  .reservation-text h2 {
+    font-size: 32px;
+  }
+
+  .btn-discover {
+    font-size: 14px;
+    padding: 10px 25px;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 120px 10%;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-row-one {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-row-two {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.footer-about {
+  max-width: 300px;
+  font-size: 14px;
+  line-height: 180%;
+}
+
+.links li {
+  font-size: 14px;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.links li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.links li a:hover {
+  color: #c80000;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.fa-circle-phone,
+.fa-circle-envelope,
+.fa-circle-location-arrow {
+  color: #c80000;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-item span {
+  align-items: center;
+  font-size: 14px;
+  line-height: 180%;
+}
+
+.footer-col form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.txtEmail {
+  flex-grow: 1;
+  border-radius: 50px;
+  background: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 15px 15px;
+  min-width: 250px;
+}
+
+.txtEmail::placeholder {
+  color: #858585;
+  padding-left: 10px;
+}
+
+.btn-Submit {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  background-color: #c80000;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-Submit:hover {
+  background-color: #a00000;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 110px;
+  margin-bottom: -100px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #848484;
+}
+
+.footer-links a {
+  color: #848484;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  color: #c80000;
+}
