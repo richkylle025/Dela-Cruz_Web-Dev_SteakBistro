@@ -84,7 +84,6 @@ header {
   outline: none;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 1024px) {
   header {
     padding: 20px 5%;
@@ -324,8 +323,6 @@ header {
   }
 }
 
-/* Hero Responsive */
-
 /* About SECTION */
 .about {
   display: flex;
@@ -519,7 +516,6 @@ header {
   }
 }
 
-
 /* MENU SECTION */
 .menu {
   height: 160vh;
@@ -558,17 +554,14 @@ header {
   margin: 20px auto;
 }
 
-/* MENU CONTAINER */
 .menu-container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
-  /* width: 100%; */
 }
 
-/* MENU SLIDER */
 .menu-slider {
   display: flex;
   gap: 90px;
@@ -628,7 +621,6 @@ header {
   object-fit: cover;
 }
 
-/* RIGHT SIDE - TEXT CONTENT */
 .menu-card-content {
   flex: 1;
   padding: 40px;
@@ -640,7 +632,6 @@ header {
   justify-content: center;
 }
 
-/* TITLE */
 .menu-card-content h4 {
   text-align: left;
   font-family: "Godshome";
@@ -650,7 +641,6 @@ header {
   margin-bottom: 20px;
 }
 
-/* INDIVIDUAL DISH ITEMS */
 .starter {
   position: relative;
   margin-bottom: 100px;
@@ -672,8 +662,6 @@ header {
 .text span {
   color: #c80000;
 }
-
-
 
 .text.one {
   position: absolute;
@@ -697,10 +685,8 @@ header {
 }
 
 .text.three {
-  
   max-width: 300px;
   position: absolute;
-
   font-family: "Montserrat";
   font-size: 18px;
   line-height: 180%;
@@ -969,7 +955,7 @@ header {
   height: 70vh;
   text-align: left;
   background-image: url("../Assets/JPG Files/Reservation-bg.jpg");
-  background-size: cover; /* Ensure proper resizing */
+  background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
 }
