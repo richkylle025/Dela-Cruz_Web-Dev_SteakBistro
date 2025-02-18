@@ -185,7 +185,7 @@ header {
       rgba(10, 2, 0, 0.5) 50%,
       rgba(10, 2, 0, 0) 60%
     ),
-    url("../Assets/JPG Files/Hero-Bg.jpg");
+    url("Hero-Bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -954,7 +954,7 @@ header {
   align-items: center;
   height: 70vh;
   text-align: left;
-  background-image: url("../Assets/JPG Files/Reservation-bg.jpg");
+  background-image: url("Reservation-bg.jpg");
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
